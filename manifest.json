@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Tic-tac-toe with ChatGPT",
     "version": "0.1.0",
-    "description": "An extention for playing Tic-tac-toe with ChatGPT",
+    "description": "A chrome extension for playing the Tic-tac-toe game with ChatGPT (using prompt engineering).",
     "content_scripts": [
       {
         "matches": ["https://chat.openai.com/*"],
