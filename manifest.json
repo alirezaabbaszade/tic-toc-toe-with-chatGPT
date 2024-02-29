@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Tic-tac-toe with ChatGPT",
+    "version": "0.1.0",
+    "description": "An extention for playing Tic-tac-toe with ChatGPT",
+    "content_scripts": [
+      {
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["Content.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/icon.png",
+        "24": "assets/icon.png",
+        "32": "assets/icon.png"
+      },
+      "default_title": "Tic-tac-toe with ChatGPT",
+      "default_popup": "popup.html"
+    }
+  }
