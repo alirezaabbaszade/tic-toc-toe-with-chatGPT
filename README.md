@@ -1,1 +1,1 @@
-A chrome extention for playing Tic-tac-toe with ChatGPT (using prompt engineering)
+A chrome extension for playing the Tic-tac-toe game with ChatGPT (using prompt engineering).
