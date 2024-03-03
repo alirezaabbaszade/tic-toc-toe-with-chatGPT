@@ -3,6 +3,13 @@
     "name": "Tic-tac-toe with ChatGPT",
     "version": "0.1.0",
     "description": "A chrome extension for playing the Tic-tac-toe game with ChatGPT (using prompt engineering).",
+    "permissions": ["scripting","activeTab","storage", "tabs"],
+    "host_permissions":["https://chat.openai.com/*"],
+    "icons":{
+      "16":"assets/icon.png",
+      "48":"assets/icon.png",
+      "128":"assets/icon.png"
+    },
     "content_scripts": [
       {
         "matches": ["https://chat.openai.com/*"],
