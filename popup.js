@@ -48,13 +48,18 @@ function turn(squareId, objectPlayer) {
     origBoard[squareId] = objectPlayer; //shows the player who has clicked the cell
     document.getElementById(squareId).innerText = objectPlayer; //put more string in the cell with the ID just called
     console.log(origBoard);
-var hi = squareId;
-chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tabs , hi) {
+    // Bebin inja to dorost pass dadi squareId ro be function va moshkeli nadare.
+chrome.tabs.query({ active: true, lastFocusedWindow: true }, function(tabs , squareId) {
         if (tabs.length > 0) {
-
-            chrome.scripting.executeScript({ target: { tabId: tabs[0].id }, function(squareId){
+            /** 
+            * Inja to faghat to baraye function parametr tarif karde bodi chizi pas nadadi man ye parametr tarif kardm behesh pass dadam meghdar ro.
+            * hala test kon bebin kar mikone ya na vasat log ham mizarm .
+            **/
+            chrome.scripting.executeScript({ target: { tabId: tabs[0].id }, function(id = squareId){
+                //Log: 
+                console.log('squareId', id);
                 document.getElementById('prompt-textarea').focus();
-                document.execCommand('insertText', false, 'Lets play tic toc toe , I chose' + squareId);
+                document.execCommand('insertText', false, 'Lets play tic toc toe , I chose' + id);
 
                 setTimeout(function() {
                         document.querySelector('[data-testid="send-button"]').click();
